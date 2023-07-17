@@ -67,8 +67,8 @@ public class Main {
     }
 
     void menuUtama() {
-        exit = false;
         Session session = new Session();
+        exit = false;
         valid = false;
         while (!exit) {
             System.out.println("=== MENU UTAMA ===");
