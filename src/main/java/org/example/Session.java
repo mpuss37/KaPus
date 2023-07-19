@@ -17,12 +17,12 @@ public class Session extends Main {
 
     void menuLogin() {
         Anggota anggota = new Anggota();
-        anggota.setNama("sengkok");
+//        anggota.setNama("sengkok"); login jadi admin
         System.out.print("Masukkan Nama Anda : ");
-//        anggota.setNama(getScanner().nextLine());
+        anggota.setNama(getScanner().nextLine());
         System.out.print("Masukkan Password Anda : ");
-        password = "1";
-        //        password = getScanner().nextLine();
+//        password = "1"; login jadi admin
+        password = getScanner().nextLine();
         validateMenu(anggota.getNama(), password);
     }
 
