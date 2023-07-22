@@ -16,6 +16,17 @@ dependencies {
     implementation 'mysql:mysql-connector-java:8.0.33'
 }
 
+jar {
+    duplicatesStrategy = 'EXCLUDE'
+    manifest {
+        attributes 'Main-Class': 'org.example.Main'
+    }
+
+    from {
+        configurations.runtimeClasspath.collect { it.isDirectory() ? it : zipTree(it) }
+    }
+}
+
 test {
     useJUnitPlatform()
 }
